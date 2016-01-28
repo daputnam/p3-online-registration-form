@@ -18,17 +18,17 @@
     		<h2>Signup for our newsletter</h2>
     		<p>Get the latest news on how your code is doing right in your inbox</p>
 
-			<hr> <!-- Could do this with a border instead? -->
+			<hr class="double"> <!-- Could do this with a border instead? -->
     	</div>
 
 		      <form action="index.html" method="post">
 		      	<fieldset> 
 		      		<legend>Contact Information</legend>
 			      	<label for="full_name">Full Name:</label>
-			      	<input type="text" id="full_name" name="user_name" placeholder="Required" tabindex="1">
+			      	<input type="text" id="full_name" name="user_name" placeholder="Required">
 
 			      	<label for="email">Email Address:</label>
-			      	<input type="email" id="email" name="User_email" placeholder="Required" tabindex="2">
+			      	<input type="email" id="email" name="User_email" placeholder="Required">
 
 			      	<label for="phone">Phone Number:</label>
 			      	<input type="tel" id="phone" name="user_phone">
@@ -40,7 +40,9 @@
 			      	<input type="text" id="city" name="user_city">
 
 			      	<label for="state">State:</label>
+
 			      	<select name="state">
+			      		<option value="default">Choose State</option>
 						<option value="AL">Alabama</option>
 						<option value="AK">Alaska</option>
 						<option value="AZ">Arizona</option>
@@ -95,29 +97,30 @@
 					</select>
 
 					<label for="zip">Zip Code:</label>
-			      	<input type="number" id="zip" name="user_zip" min="5">
+					<div class="zip-div">
+			      		<input type="number" id="zip" name="user_zip" min="5">
+			      	</div>		
 
 		      	</fieldset>
-
-		      	<fieldset>
-		      		<legend>Newsletter</legend>
-		      		<p>Delete me?</p>
-		      		<label>Select the newsletters you would like to receive</label>
+		      	<hr>
+		      	<fieldset class="newsletter-fieldset">
+		      		<legend >Newsletter</legend>
+		      		<label class="block no-bottom-margin">Select the newsletters you would like to receive</label>
 		      		<input type="checkbox" id="html_news" value="newsletter_html" name="user_newsletter" checked>
-		      		<label class="light" for="html_news">HTML News</label><br>
+		      		<label for="html_news" class="block">HTML News</label><br>
 
 					<input type="checkbox" id="css_news" value="newsletter_css" name="user_newsletter">
-					<label class="light" for="css_news">CSS News</label><br>
+					<label for="css_news">CSS News</label><br>
 
 					<input type="checkbox" id="js_news" value="newsletter_js" name="user_newsletter">
-					<label class="light" for="js_news">Javascript News</label><br>
+					<label for="js_news">Javascript News</label><br>
 
 
-					<label for="format">Newsletter Format:</label>
-					<input type="radio" name="format" value="html" checked> HTML<br>
-					<input type="radio" name="format" value="plain"> Plain Text<br>
+					<label for="format" class="top-margin no-bottom-margin" id="newsletter-format">Newsletter Format:</label>
+					<input type="radio" name="format" value="html" class="block" checked> HTML<br>
+					<input type="radio" name="format" value="plain" class="block"> Plain Text<br>
 					
-					<label for="other_topics">Other topics you'd like to hear about:</label>
+					<label for="other_topics" class="top-margin block no-bottom-margin">Other topics you'd like to hear about:</label>
 					<textarea id="other_topics" name="user_other_topics"></textarea>
 					<button type="submit">Sign Up</button>
 		      	</fieldset>
