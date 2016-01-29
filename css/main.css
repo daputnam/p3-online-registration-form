@@ -274,6 +274,10 @@ footer {
     width:200px;
     margin-bottom: 1px;
   }
+  
+  input[type="radio"]{
+    max-width:15px;
+  }
 
   #newsletter-format {
     clear:both;
