@@ -2,7 +2,7 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border: 1px solid red;
+  
 }
 
 /* default styles from tth */
@@ -26,13 +26,14 @@ select {
   margin: 0;
   outline: 0;
   padding: 15px;
-  width: 100%;
   background-color: #eff0f1;
   color: #8a97a0;
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
   margin-bottom: 30px;
 
+  width:99%;
 }
+
 select  {
   padding-left:30px;
 }
@@ -81,36 +82,19 @@ legend {
 }
 
 label {
-  display:block;
+  display:inline-block; 
+  width: 99%;
   margin-bottom: 8px;
   color:grey;
   padding-bottom:5px;
 }
 
+
 input[type="checkbox"] + label {
   display:inline;
 }
-/*label.light {
-  font-weight: 300;
-  display: inline;
-}
 
 
-
- .number {
-  background-color: #5fcf80;
-  color: #fff;
-  height: 30px;
-  width: 30px;
-  display: inline-block;
-  font-size: 0.8em;
-  margin-right: 4px;
-  line-height: 30px;
-  text-align: center;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
-  border-radius: 100%;
-}
-*/
 
 /* my sick styles */
 hr {
@@ -217,8 +201,33 @@ footer {
 
 
 
+.thirty-width {
+  width:30%;
+}
+
+.full-width {
+  width:100%;
+}
 
 @media screen and (min-width: 769px) {
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  textarea,
+  select {
+    width:78%;  
+
+  }
+
+
   .main-title {
     font-size:1.2em;
     font-weight: 400;
@@ -227,16 +236,14 @@ footer {
   label{
     padding-top: 12px;
     height:50px;
-    float: left;
-    width: 17%;
+    /* float: left; */
+    width: 20%;
     margin-right:1em;
     margin-bottom: 30px;
   }
 
   input {
-  
-    float:right;
-    max-width: 80%;
+    width: 65%;
   }
   select {
     float:right;
@@ -244,49 +251,31 @@ footer {
   }
 
   .zip-div {
-    width:80%;
+    width:78%;
     float:right;
   }
 
-  input[type="number"]{
-    float:left;
+  input[type="radio"], input[type="checkbox"]{
+    width:2%;
   }
 
-  .block {
-    display:block;
-    width: 100%;
+  .newsletter-fieldset label {
+    width:98%;
   }
 
-   input[type="checkbox"], input[type="radio"]{
-    display:block;
-    max-width:80%;
-    float:left;
-    height:45px;
-   }
-
-
-  input[type="checkbox"] {
-    padding-bottom: 0;
-    margin-bottom:0;
-    clear:both;
-  }
-  input[type="checkbox"] +label{
-    width:200px;
-    margin-bottom: 1px;
-  }
-  
-  input[type="radio"]{
-    max-width:15px;
-  }
-
-  #newsletter-format {
-    clear:both;
-    width:100%;
-
-  }
   .no-bottom-margin{
     margin-bottom: 0;
   }
 
+  .newsletter-format-section .thirty-width {
+    height:30px;
+    padding-top:0;
+    width:80%;
+    margin-bottom:0px;
+  }
+
+  textarea {
+    width:100%;
+  }
 }
 
